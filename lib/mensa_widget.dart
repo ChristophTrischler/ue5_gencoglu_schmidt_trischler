@@ -6,41 +6,42 @@ class MensaWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-            /*shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0))*/
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-                border: Border.all(color: const Color.fromARGB(255, 6, 43, 107)),
+                border:
+                    Border.all(color: const Color.fromARGB(255, 6, 43, 107)),
                 borderRadius: BorderRadius.circular(15)),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Row(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(width:5),
-                  Icon(Icons.local_cafe),
-                  SizedBox(width: 15),
-                  Text("Mensa"),
-                  SizedBox(width: 100),
-                  Image.network(
-                      'https://img.freepik.com/free-vector/different-foods-set-white-background_1308-104236.jpg',
-                      width: 100,
-                      height: 100,),
-                  SizedBox(width: 130),
-                  Icon(Icons.more_vert),
-                ],
-              ),
-              SizedBox(height: 10),
-              Padding(
-              padding: EdgeInsets.only(left: 45), // "Mensa" hizasına göre
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children:[
-                  Text("Wann? 4.DS"),
-                  SizedBox(height: 5),
-                  Text("Wo? Alte Mensa"),
-              SizedBox(height: 10),
-              ElevatedButton(
-                  onPressed:() => (), child: Text('Zum Angebot')
-                  )
-            ]))])));
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.local_cafe),
+                      Text("Mensa"),
+                      Icon(Icons.more_vert),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text("Wann? 4.DS"),
+                              SizedBox(height: 5),
+                              Text("Wo? Alte Mensa"),
+                              SizedBox(height: 10),
+                              ElevatedButton(
+                                  onPressed: () => (),
+                                  child: Text('Zum Angebot'))
+                            ]),
+                        Image.network(
+                          'https://img.freepik.com/free-vector/different-foods-set-white-background_1308-104236.jpg',
+                          width: 200,
+                        ),
+                      ])
+                ])));
   }
 }

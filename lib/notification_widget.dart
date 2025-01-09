@@ -9,36 +9,43 @@ class NotificationWidget extends StatelessWidget {
             style: const TextStyle(color: Colors.white),
             child: Container(
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(139, 0, 0, 1),
+                  color: const Color.fromRGBO(139, 0, 0, 1),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Column(
-                      children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                padding: const EdgeInsets.all(20),
+                child: const Column(
+                  children: [
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.error_rounded,
+                            color: Colors.white,
+                          ),
+                          Text(
+                            "Meldung",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Icon(
+                            Icons.close,
+                            color: Colors.white,
+                          )
+                        ]),
+                    Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text.rich(
+                          TextSpan(
+                            text:
+                                "Einschreiben für mündliche Prüfungen hat begonnen und endet am \n",
                             children: [
-                              Icon(
-                                Icons.error_rounded,
-                                color: Colors.white,
-                              ),
-                              Text(
-                                "Meldung",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              Icon(
-                                Icons.close,
-                                color: Colors.white,
-                              )
-                            ]),
-                        Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Text(
-                              "Einschreiben für mündliche Prüfungen hat begonnen und endet am 21.01.2025",
-                              textAlign: TextAlign.center,
-                            ))
-                      ],
-                    )))));
+                              TextSpan(
+                                  text: "21.01.2025",
+                                  style: TextStyle(fontWeight: FontWeight.bold))
+                            ],
+                          ),
+                          textAlign: TextAlign.center,
+                        ))
+                  ],
+                ))));
   }
 }

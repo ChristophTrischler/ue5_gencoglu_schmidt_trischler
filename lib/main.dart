@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ue5_gencoglu_schmidt_trischler/time_table_widget.dart';
 import './notification_widget.dart' show NotificationWidget;
 import './mensa_widget.dart' show MensaWidget;
 
@@ -16,9 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          body: const Padding(
-              padding: EdgeInsets.all(20),
-              child: Column(children: [NotificationWidget(), MensaWidget()])),
+          body: ListView(padding: EdgeInsets.all(20), children: const <Widget>[
+            NotificationWidget(),
+            SizedBox(height: 10),
+            MensaWidget(),
+            SizedBox(height: 10),
+            TimeTableWidget()
+          ]),
           appBar: const TopBar(),
           key: _scaffoldKey,
           drawer: const Sidebar(),
@@ -50,7 +55,7 @@ class BottomBar extends StatelessWidget {
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   const TopBar({super.key});
   @override
-  Size get preferredSize => const Size(15, 100);
+  Size get preferredSize => const Size(100, 50);
 
   @override
   Widget build(BuildContext context) {
