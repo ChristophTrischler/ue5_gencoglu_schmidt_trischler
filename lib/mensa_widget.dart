@@ -9,26 +9,28 @@ class MensaWidget extends StatelessWidget {
             /*shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0))*/
             decoration: BoxDecoration(
-                border: Border.all(color: Colors.blueAccent),
+                border: Border.all(color: const Color.fromARGB(255, 6, 43, 107)),
                 borderRadius: BorderRadius.circular(15)),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(
                 children: [
+                  SizedBox(width:5),
                   Icon(Icons.local_cafe),
                   SizedBox(width: 15),
                   Text("Mensa"),
                   SizedBox(width: 65),
                   Image.network(
                       'https://img.freepik.com/free-vector/different-foods-set-white-background_1308-104236.jpg',
-                      width: 50),
+                      width: 100,
+                      height: 100,),
                   SizedBox(width: 130),
                   Icon(Icons.more_vert),
                 ],
               ),
               SizedBox(height: 10),
               Padding(
-              padding: EdgeInsets.only(left: 35), // "Mensa" hizasına göre
+              padding: EdgeInsets.only(left: 45), // "Mensa" hizasına göre
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:[
@@ -37,7 +39,8 @@ class MensaWidget extends StatelessWidget {
                   Text("Wo? Alte Mensa"),
               SizedBox(height: 10),
               ElevatedButton(
-                  onPressed:() => (), child: Text('Zum Angebot'))
+                  onPressed:() => (), child: Text('Zum Angebot')
+                  )
             ]))])));
   }
 }
