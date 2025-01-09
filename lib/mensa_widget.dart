@@ -19,7 +19,7 @@ class MensaWidget extends StatelessWidget {
                   Icon(Icons.local_cafe),
                   SizedBox(width: 15),
                   Text("Mensa"),
-                  SizedBox(width: 65),
+                  SizedBox(width: 100),
                   Image.network(
                       'https://img.freepik.com/free-vector/different-foods-set-white-background_1308-104236.jpg',
                       width: 100,
