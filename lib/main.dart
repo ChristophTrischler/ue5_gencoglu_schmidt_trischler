@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './mensa_widget.dart' show Mensawidget;
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          body: Mensawidget(),
             appBar: TopBar(),
             key: _scaffoldKey,
             drawer: Sidebar(),
