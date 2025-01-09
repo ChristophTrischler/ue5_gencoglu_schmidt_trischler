@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './notification_widget.dart' show NotificationWidget;
-import './mensa_widget.dart' show Mensawidget;
+import './mensa_widget.dart' show MensaWidget;
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -18,17 +18,12 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           body: const Padding(
               padding: EdgeInsets.all(20),
-              child: Column(children: [NotificationWidget()])),
+              child: Column(children: [NotificationWidget(), MensaWidget()])),
           appBar: const TopBar(),
           key: _scaffoldKey,
           drawer: const Sidebar(),
           bottomNavigationBar: const BottomBar(),
         ));
-          body: Mensawidget(),
-            appBar: TopBar(),
-            key: _scaffoldKey,
-            drawer: Sidebar(),
-            bottomNavigationBar: BottomBar()));
   }
 }
 
