@@ -21,15 +21,23 @@ class MensaWidget extends StatelessWidget {
                   SizedBox(width: 65),
                   Image.network(
                       'https://img.freepik.com/free-vector/different-foods-set-white-background_1308-104236.jpg',
-                      width: 50)
+                      width: 50),
+                  SizedBox(width: 130),
+                  Icon(Icons.more_vert),
                 ],
               ),
               SizedBox(height: 10),
-              Text("Wann? 4.DS"),
-              Text("Wo? Alte Mensa"),
+              Padding(
+              padding: EdgeInsets.only(left: 35), // "Mensa" hizasına göre
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:[
+                  Text("Wann? 4.DS"),
+                  SizedBox(height: 5),
+                  Text("Wo? Alte Mensa"),
               SizedBox(height: 10),
               ElevatedButton(
-                  onPressed: () => (), child: const Text('Zum Angebot'))
-            ])));
+                  onPressed:() => (), child: Text('Zum Angebot'))
+            ]))])));
   }
 }
