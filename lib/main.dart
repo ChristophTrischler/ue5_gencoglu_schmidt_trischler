@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ue5_gencoglu_schmidt_trischler/time_table_widget.dart';
 import './notification_widget.dart' show NotificationWidget;
 import './mensa_widget.dart' show MensaWidget;
+import 'theme.dart' show buildAppTheme;
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -15,10 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: buildAppTheme(),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: ListView(padding: EdgeInsets.all(20), children: const <Widget>[
             NotificationWidget(),
+            SizedBox(height: 10),
             SizedBox(height: 10),
             MensaWidget(),
             SizedBox(height: 10),
@@ -38,8 +41,6 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      fixedColor: Colors.blueAccent,
-      unselectedItemColor: Colors.black,
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: "Dash"),
         BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Musik"),
