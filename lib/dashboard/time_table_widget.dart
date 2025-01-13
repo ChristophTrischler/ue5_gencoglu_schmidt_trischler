@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/dashboard/dashboard.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/theme.dart';
+import 'dashboard.dart';
+import '../theme.dart';
 
 class TimeTableWidget extends StatelessWidget {
   const TimeTableWidget({super.key});

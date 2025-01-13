@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/main.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/theme.dart';
+import '../main.dart';
+import '../theme.dart';
 
 class TimeTablePage extends StatelessWidget {
   final Map<Weekday, List<TimeTableItem>> _data = {

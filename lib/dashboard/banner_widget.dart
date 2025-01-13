@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/theme.dart';
+import '../theme.dart';
 
 class BannerWidget extends StatelessWidget {
   const BannerWidget({super.key});

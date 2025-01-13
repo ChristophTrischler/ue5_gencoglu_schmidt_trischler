@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/time_table/time_table.dart';
+import 'time_table/time_table.dart';
 import 'theme.dart' show buildAppTheme, mainColor;
 import 'dashboard/dashboard.dart' show Dashboard;
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/dashboard/banner_widget.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/main.dart';
+import 'banner_widget.dart';
+import '../main.dart';
 
 import 'time_table_widget.dart';
 import './notification_widget.dart' show NotificationWidget;

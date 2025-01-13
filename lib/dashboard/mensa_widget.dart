@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ue5_gencoglu_schmidt_trischler/dashboard/dashboard.dart';
+import 'dashboard.dart';
 
 class MensaWidget extends StatelessWidget {
   const MensaWidget({super.key});
